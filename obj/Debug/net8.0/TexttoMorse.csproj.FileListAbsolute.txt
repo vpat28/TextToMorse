@@ -1,0 +1,14 @@
+C:\Users\jmffhrf\OneDrive - JM Family Enterprises\Documents\ITS Academy Projects\My Code Jams\TexttoMorse\bin\Debug\net8.0\TexttoMorse.exe
+C:\Users\jmffhrf\OneDrive - JM Family Enterprises\Documents\ITS Academy Projects\My Code Jams\TexttoMorse\bin\Debug\net8.0\TexttoMorse.deps.json
+C:\Users\jmffhrf\OneDrive - JM Family Enterprises\Documents\ITS Academy Projects\My Code Jams\TexttoMorse\bin\Debug\net8.0\TexttoMorse.runtimeconfig.json
+C:\Users\jmffhrf\OneDrive - JM Family Enterprises\Documents\ITS Academy Projects\My Code Jams\TexttoMorse\bin\Debug\net8.0\TexttoMorse.dll
+C:\Users\jmffhrf\OneDrive - JM Family Enterprises\Documents\ITS Academy Projects\My Code Jams\TexttoMorse\bin\Debug\net8.0\TexttoMorse.pdb
+C:\Users\jmffhrf\OneDrive - JM Family Enterprises\Documents\ITS Academy Projects\My Code Jams\TexttoMorse\obj\Debug\net8.0\TexttoMorse.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jmffhrf\OneDrive - JM Family Enterprises\Documents\ITS Academy Projects\My Code Jams\TexttoMorse\obj\Debug\net8.0\TexttoMorse.AssemblyInfoInputs.cache
+C:\Users\jmffhrf\OneDrive - JM Family Enterprises\Documents\ITS Academy Projects\My Code Jams\TexttoMorse\obj\Debug\net8.0\TexttoMorse.AssemblyInfo.cs
+C:\Users\jmffhrf\OneDrive - JM Family Enterprises\Documents\ITS Academy Projects\My Code Jams\TexttoMorse\obj\Debug\net8.0\TexttoMorse.csproj.CoreCompileInputs.cache
+C:\Users\jmffhrf\OneDrive - JM Family Enterprises\Documents\ITS Academy Projects\My Code Jams\TexttoMorse\obj\Debug\net8.0\TexttoMorse.dll
+C:\Users\jmffhrf\OneDrive - JM Family Enterprises\Documents\ITS Academy Projects\My Code Jams\TexttoMorse\obj\Debug\net8.0\refint\TexttoMorse.dll
+C:\Users\jmffhrf\OneDrive - JM Family Enterprises\Documents\ITS Academy Projects\My Code Jams\TexttoMorse\obj\Debug\net8.0\TexttoMorse.pdb
+C:\Users\jmffhrf\OneDrive - JM Family Enterprises\Documents\ITS Academy Projects\My Code Jams\TexttoMorse\obj\Debug\net8.0\TexttoMorse.genruntimeconfig.cache
+C:\Users\jmffhrf\OneDrive - JM Family Enterprises\Documents\ITS Academy Projects\My Code Jams\TexttoMorse\obj\Debug\net8.0\ref\TexttoMorse.dll
