@@ -2,6 +2,8 @@
 {
     public class Program
     {
+
+        //Awesome idea, and the execution is super cool, enjoyed this project
         public static void Main()
         {
             Console.Clear();
@@ -43,6 +45,18 @@
         {
             bool validinput = false;
             while (!validinput)
+                //Nice Job! I liked the input validation here! I did enter a null value but didn't get an error message or option to restart. Maybe if we could add that in here that would be awesome.
+                /* Something like this snippet?
+
+                     if (string.IsNullOrEmpty(userInput))
+                {
+                    Console.WriteLine("Input cannot be null or empty. Please try again.");
+                    Thread.Sleep(1500);
+                    Console.Clear();
+                    continue;
+                }
+                */
+                
             {
                 Console.WriteLine("Press 'F' to enter a file path \n Press 'T' to enter your own text to be converted ");
                 string userInput = Console.ReadLine();
