@@ -24,5 +24,6 @@ Welcome to **TextToMorse**! This project converts English text to Morse code, ei
 
 ## 📋 Example
 .-.  .  ...  -  .-  .-.  -
+
  R    E  S    T  A   R    T
 
