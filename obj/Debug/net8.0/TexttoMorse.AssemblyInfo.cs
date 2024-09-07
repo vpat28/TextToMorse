@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TexttoMorse")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae9a94921057339c1960424c015a4d9d3b7fad24")]
 [assembly: System.Reflection.AssemblyProductAttribute("TexttoMorse")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TexttoMorse")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
