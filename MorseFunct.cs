@@ -1,9 +1,8 @@
-﻿using System;
-using TexttoMorse;
+﻿using TexttoMorse;
 
 public class MorseFunct
 {
-    public static Dictionary<char, string?> morseCodeDictionary = new Dictionary<char, string?>
+    public static Dictionary<char, string?> morseDict = new Dictionary<char, string?>
     {
         { 'A', ".-" }, { 'B', "-..." }, { 'C', "-.-." }, { 'D', "-.." },
         { 'E', "." }, { 'F', "..-." }, { 'G', "--." }, { 'H', "...." },
@@ -29,7 +28,7 @@ public class MorseFunct
 
         foreach (char c in input)
         {
-            MorseEquivalent = morseCodeDictionary.GetValueOrDefault(c, null);
+            MorseEquivalent = morseDict.GetValueOrDefault(c, null);
             Console.Write(MorseEquivalent);
             Console.Write("  ");
             if (c.Equals(' '))
@@ -56,9 +55,9 @@ public class MorseFunct
 
             try
             {
-                MorseEquivalent = morseCodeDictionary.GetValueOrDefault(c, null);
+                MorseEquivalent = morseDict.GetValueOrDefault(c, null);
                 tempword = tempword + c;
-                Console.ForegroundColor = ConsoleColor.White;
+                Program.ResetConsoleColor();
                 Console.Write(MorseEquivalent);
                 if (!c.ToString().Equals(" ") && !(c.Equals(delimiter)))
                 {
@@ -77,7 +76,7 @@ public class MorseFunct
                 if (c.Equals(' ') || c.Equals(delimiter))
                 {
                     Console.WriteLine("\n");
-                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Program.SetConsoleColor("blue");
                     Console.WriteLine(tempword);
                     Console.WriteLine("\n");
                     tempword = "";
@@ -90,13 +89,13 @@ public class MorseFunct
                 }
             }
             catch (Exception e) {
-                Console.ForegroundColor = ConsoleColor.Red;
+                Program.SetConsoleColor("red");
                 Console.Write("\n" + "The character: ");
 
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.Write(c.ToString()); 
+                Program.SetConsoleColor("yellow");
+                Console.Write(c.ToString());
 
-                Console.ForegroundColor = ConsoleColor.Red;
+                Program.SetConsoleColor("red");
                 Console.Write(" does NOT exist in Morse Code. Try something else.");
                 Console.WriteLine("");
 
@@ -107,27 +106,18 @@ public class MorseFunct
     }
 
   
-    public static void FileToMorse(string filename)
+    public static void FileToMorse(string fileName)
     {
         try
         {
             // Open the text file using a stream reader.
-            using StreamReader reader = new StreamReader(filename);
+            using StreamReader reader = new StreamReader(fileName);
 
             // Read the stream as a string.
             string text = reader.ReadToEnd();
-            // string text = reader.ReadLine();
-
-            //foreach (char c in text)
-            //{
-            //    TranslateToMorse(c.ToString());
-            //}
-            //calling convert method
-
-
 
             // Write the text to the console.
-             Console.WriteLine(text);
+            Console.WriteLine(text);
             text  = text.ToUpper();
             text = text.TrimEnd();
             text = text.TrimStart();

@@ -9,7 +9,7 @@
             Console.ForegroundColor = ConsoleColor.Blue;
             Thread.Sleep(1000);
             Console.WriteLine("████████╗███████╗██╗  ██╗████████╗               ████████╗ ██████╗                ███╗   ███╗ ██████╗ ██████╗ ███████╗███████╗      \r\n╚══██╔══╝██╔════╝╚██╗██╔╝╚══██╔══╝               ╚══██╔══╝██╔═══██╗               ████╗ ████║██╔═══██╗██╔══██╗██╔════╝██╔════╝      \r\n   ██║   █████╗   ╚███╔╝    ██║   █████╗   █████╗   ██║   ██║   ██║█████╗   █████╗██╔████╔██║██║   ██║██████╔╝███████╗█████╗        \r\n   ██║   ██╔══╝   ██╔██╗    ██║   ╚════╝   ╚════╝   ██║   ██║   ██║╚════╝   ╚════╝██║╚██╔╝██║██║   ██║██╔══██╗╚════██║██╔══╝        \r\n   ██║   ███████╗██╔╝ ██╗   ██║         ██╗         ██║   ╚██████╔╝      ██╗      ██║ ╚═╝ ██║╚██████╔╝██║  ██║███████║███████╗██╗██╗\r\n   ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝         ╚═╝         ╚═╝    ╚═════╝       ╚═╝      ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝╚═╝\r\n                                                                                                                                    ");
-            GetUserInput();
+            AppStartup();
         }
 
 
@@ -20,18 +20,16 @@
              * Changed userinput to userInput
              * Reset console text color to white after prompt to help better distinguish prompt from input
              */
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("Enter [R] to restart. Enter [Q] to quit.");
-            Console.ForegroundColor = ConsoleColor.White;
-            string? userInput = Console.ReadLine();
+            SetConsoleColor("blue");
+            string? userInput = ReadUserInput("Enter [R] to restart. Enter [Q] to quit.");
 
             while (true)
             {
                 if (string.IsNullOrEmpty(userInput) || (userInput.ToLower() != "q" && userInput.ToLower() != "r"))
                 {
+                    SetConsoleColor("yellow");
                     Console.WriteLine("Please enter a valid option.");
-                    Console.WriteLine("Press 'R' to restart. Press 'Q' to quit.");
-                    userInput = Console.ReadLine();
+                    userInput = ReadUserInput("Enter [R] to restart. Enter [Q] to quit.");
                 }
                 else break;
             }
@@ -40,11 +38,11 @@
             {
                 case "r":
                     Console.Clear();
-                    GetUserInput();
+                    AppStartup();
                     break;
                 case "q":
                     System.Environment.Exit(0);
-                    Console.ForegroundColor = ConsoleColor.White;
+                    ResetConsoleColor();
                     break;
                 default:
                     throw new Exception();
@@ -52,31 +50,31 @@
         }
 
 
-        static void GetUserInput()
+        static void AppStartup()
         {
             /* Logan changes:
+             * Changed 'GetUserInput' to 'AppStartup' bc I thought it made more sense
+             * Implemented ReadUserInput and SetConsoleColor function for more concise code
+             * Changed validation/warning messages to yellow text color
              * Refactored the isValid logic here to be a bit more clear. Separates validation logic from handling user choice logic.
              * Reset console text color to white after prompt to help better distinguish prompt from input
              */
-            Console.WriteLine("Enter [F] to enter a file path.\nEnter [T] to enter your own text to be converted.");
-            Console.ForegroundColor = ConsoleColor.White;
-            string? userInput = Console.ReadLine();
+            SetConsoleColor("blue");
+            string? userInput = ReadUserInput("Enter [F] to enter a file path.\nEnter [T] to enter your own text to be converted.");
 
             while (true)
             {
                 if (string.IsNullOrEmpty(userInput) || (userInput.ToLower() != "f" && userInput.ToLower() != "t"))
                 {
-                    Console.ForegroundColor = ConsoleColor.Red;
+                    SetConsoleColor("yellow");
                     Console.WriteLine("Please enter a valid option.");
-                    Console.WriteLine("[F] to convert from a file path or [T] to convert your own text.");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    userInput = Console.ReadLine();
+                    userInput = ReadUserInput("[F] to convert from a file path or [T] to convert your own text.");
                 }
                 else break;
             }
 
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Blue;
+            SetConsoleColor("blue");
 
             switch (userInput.ToLower())
             {
@@ -87,18 +85,15 @@
                         * Added validation to check if path exists on device
                      * Perhaps consider mentioning to the user what file types are accepted
                      */
-                    Console.WriteLine("Enter a file path: ");
-                    string? filePath = Console.ReadLine();
+                    string? filePath = ReadUserInput("Enter a file path:");
 
                     // Validation
                     while (true)
                     {
                         if (string.IsNullOrEmpty(filePath) || !Path.Exists(filePath))
                         {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("Enter a valid file path: ");
-                            Console.ForegroundColor = ConsoleColor.White;
-                            filePath = Console.ReadLine();
+                            SetConsoleColor("yellow");
+                            filePath = ReadUserInput("Enter a valid file path:");
                         }
                         else break;
                     }
@@ -107,18 +102,15 @@
                     break;
 
                 case "t":
-                    Console.WriteLine("Enter your text: ");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    string? text = Console.ReadLine();  // Removed ToUpper() here because if user enters null it will error
+                    string? text = ReadUserInput("Enter your text:\n");   // Removed ToUpper() here because if user enters null it will error
+                    Console.WriteLine();
 
                     while (true)
                     {
                         if (string.IsNullOrEmpty(text))
                         {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("Text cannot be emtpy. Enter your text: ");
-                            Console.ForegroundColor = ConsoleColor.White;
-                            text = Console.ReadLine();
+                            SetConsoleColor("yellow");
+                            text = ReadUserInput("Text cannot be emtpy. Enter your text:");
                         }
                         else break;
                     }
@@ -133,6 +125,55 @@
             }
 
             EndofGame();
+        }
+
+
+        // Method to prompt and return user input
+        public static string? ReadUserInput(string prompt)
+        {
+            Console.Write(prompt + " ");
+            ResetConsoleColor();
+            string? inputLine = Console.ReadLine();
+
+            return string.IsNullOrEmpty(inputLine) ? null : inputLine;
+        }
+
+
+        // Method to remove quotation marks from a file path string
+        public static string? RemoveQuotations(string path)
+        {
+            if (string.IsNullOrEmpty(path))
+                return null;
+            else
+                return path.Trim(new char[] { '"' });
+        }
+
+
+        // Method to change the console text color
+        public static void SetConsoleColor(string color)
+        {
+            switch (color)
+            {
+                case "red":
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    break;
+                case "yellow":
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    break;
+                case "blue":
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    break;
+                default:
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+            }
+        }
+
+
+        // Method to reset the console text color to white
+        public static void ResetConsoleColor()
+        {
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }
