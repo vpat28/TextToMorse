@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TexttoMorse")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2942729f1d14d6472646e6ffae2e940b80106e69")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7191d4ceb51eff3ca535c1f08323f904f9b539bc")]
 [assembly: System.Reflection.AssemblyProductAttribute("TexttoMorse")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TexttoMorse")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

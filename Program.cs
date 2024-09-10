@@ -4,9 +4,9 @@
     {
         public static void Main()
         {
-            Console.ForegroundColor = ConsoleColor.White;   // Added this to start of program to ensure default color is restored when the program runs
+            ResetConsoleColor();   // Added this to start of program to ensure default color is restored when the program runs (in case user force quits)
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Blue;
+            SetConsoleColor("blue");
             Thread.Sleep(1000);
             Console.WriteLine("████████╗███████╗██╗  ██╗████████╗               ████████╗ ██████╗                ███╗   ███╗ ██████╗ ██████╗ ███████╗███████╗      \r\n╚══██╔══╝██╔════╝╚██╗██╔╝╚══██╔══╝               ╚══██╔══╝██╔═══██╗               ████╗ ████║██╔═══██╗██╔══██╗██╔════╝██╔════╝      \r\n   ██║   █████╗   ╚███╔╝    ██║   █████╗   █████╗   ██║   ██║   ██║█████╗   █████╗██╔████╔██║██║   ██║██████╔╝███████╗█████╗        \r\n   ██║   ██╔══╝   ██╔██╗    ██║   ╚════╝   ╚════╝   ██║   ██║   ██║╚════╝   ╚════╝██║╚██╔╝██║██║   ██║██╔══██╗╚════██║██╔══╝        \r\n   ██║   ███████╗██╔╝ ██╗   ██║         ██╗         ██║   ╚██████╔╝      ██╗      ██║ ╚═╝ ██║╚██████╔╝██║  ██║███████║███████╗██╗██╗\r\n   ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝         ╚═╝         ╚═╝    ╚═════╝       ╚═╝      ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝╚═╝\r\n                                                                                                                                    ");
             AppStartup();
@@ -28,7 +28,7 @@
                 if (string.IsNullOrEmpty(userInput) || (userInput.ToLower() != "q" && userInput.ToLower() != "r"))
                 {
                     SetConsoleColor("yellow");
-                    Console.WriteLine("Please enter a valid option.");
+                    Console.WriteLine("\n⚠️ Please enter a valid option.");
                     userInput = ReadUserInput("Enter [R] to restart. Enter [Q] to quit.");
                 }
                 else break;
@@ -60,15 +60,15 @@
              * Reset console text color to white after prompt to help better distinguish prompt from input
              */
             SetConsoleColor("blue");
-            string? userInput = ReadUserInput("Enter [F] to enter a file path.\nEnter [T] to enter your own text to be converted.");
+            string? userInput = ReadUserInput("[F] Convert file to morse.\n[T] Convert entered text to morse.\nChoose:");
 
             while (true)
             {
                 if (string.IsNullOrEmpty(userInput) || (userInput.ToLower() != "f" && userInput.ToLower() != "t"))
                 {
                     SetConsoleColor("yellow");
-                    Console.WriteLine("Please enter a valid option.");
-                    userInput = ReadUserInput("[F] to convert from a file path or [T] to convert your own text.");
+                    Console.WriteLine("\n⚠️ Please enter a valid option.");
+                    userInput = ReadUserInput("Enter [F] to convert from a file path or [T] to convert your own text:");
                 }
                 else break;
             }
@@ -93,6 +93,7 @@
                         if (string.IsNullOrEmpty(filePath) || !Path.Exists(filePath))
                         {
                             SetConsoleColor("yellow");
+                            Console.WriteLine("\n⚠️ Path does not exist.");
                             filePath = ReadUserInput("Enter a valid file path:");
                         }
                         else break;
@@ -102,15 +103,15 @@
                     break;
 
                 case "t":
-                    string? text = ReadUserInput("Enter your text:\n");   // Removed ToUpper() here because if user enters null it will error
-                    Console.WriteLine();
+                    string? text = ReadUserInput("Enter your text:");   // Removed ToUpper() here because if user enters null it will error
+                    Console.WriteLine("\n");
 
                     while (true)
                     {
                         if (string.IsNullOrEmpty(text))
                         {
                             SetConsoleColor("yellow");
-                            text = ReadUserInput("Text cannot be emtpy. Enter your text:");
+                            text = ReadUserInput("\n⚠️ Text cannot be emtpy. Enter your text:");
                         }
                         else break;
                     }

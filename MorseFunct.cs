@@ -1,4 +1,5 @@
-﻿using TexttoMorse;
+﻿using System.Text;
+using TexttoMorse;
 
 public class MorseFunct
 {
@@ -22,29 +23,12 @@ public class MorseFunct
     };
 
 
-    static void ConvertToMorse(string input)
-    {
-        string MorseEquivalent;
-
-        foreach (char c in input)
-        {
-            MorseEquivalent = morseDict.GetValueOrDefault(c, null);
-            Console.Write(MorseEquivalent);
-            Console.Write("  ");
-            if (c.Equals(' '))
-            {
-                Console.WriteLine("\n");
-            }
-        }
-    }
-
-
     public static void TranslateToMorse(string input)
     {
         char delimiter = '\u001F'; // Universal string end character
         input = input + delimiter;
         string MorseEquivalent;
-        string tempword = " ";
+        StringBuilder tempWord = new StringBuilder(" ");
         CharEnumerator parse = input.GetEnumerator();
         bool test = false;
 
@@ -56,30 +40,32 @@ public class MorseFunct
             try
             {
                 MorseEquivalent = morseDict.GetValueOrDefault(c, null);
-                tempword = tempword + c;
+                tempWord.Append(c);
                 Program.ResetConsoleColor();
                 Console.Write(MorseEquivalent);
+
                 if (!c.ToString().Equals(" ") && !(c.Equals(delimiter)))
                 {
                     string whitespaceString = new string(' ', MorseEquivalent.Length);
                     if (MorseEquivalent.Length == 1)
                     {
-                        tempword += whitespaceString + " ";
+                        tempWord.Append(whitespaceString + " ");
                     }
                     else
                     {
-                        tempword += whitespaceString + " ";
+                        tempWord.Append(whitespaceString + " ");
                     }
-
                 }
+
                 Console.Write("  ");
+
                 if (c.Equals(' ') || c.Equals(delimiter))
                 {
                     Console.WriteLine("\n");
                     Program.SetConsoleColor("blue");
-                    Console.WriteLine(tempword);
+                    Console.WriteLine(tempWord);
                     Console.WriteLine("\n");
-                    tempword = "";
+                    tempWord.Clear();
                     Console.WriteLine();
                     if (c.Equals(delimiter))
                     {
@@ -89,13 +75,13 @@ public class MorseFunct
                 }
             }
             catch (Exception e) {
-                Program.SetConsoleColor("red");
-                Console.Write("\n" + "The character: ");
-
                 Program.SetConsoleColor("yellow");
+                Console.Write("\n" + "The character ");
+
+                Program.SetConsoleColor("red");
                 Console.Write(c.ToString());
 
-                Program.SetConsoleColor("red");
+                Program.SetConsoleColor("yellow");
                 Console.Write(" does NOT exist in Morse Code. Try something else.");
                 Console.WriteLine("");
 
