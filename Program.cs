@@ -60,6 +60,7 @@
             {
                 Console.WriteLine("Press 'F' to enter a file path \n Press 'T' to enter your own text to be converted ");
                 string userInput = Console.ReadLine();
+                
                 switch (userInput.ToLower())
                 {
                     case "f":
@@ -71,6 +72,11 @@
                     case "t":
                         Console.WriteLine("Enter your text: ");
                         string textInput = Console.ReadLine().ToUpper();
+                        while (userInput.Contains('#'))
+                        {
+                            Console.WriteLine("Text cannot contain #. Please try again\n");
+                            textInput = Console.ReadLine().ToUpper();
+                        }
                         MorseFunct.TranslateToMorse(textInput);
                         validinput = true;
                         break;
