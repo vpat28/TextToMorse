@@ -1,17 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jmffhrf\\OneDrive - JM Family Enterprises\\Documents\\ITS Academy Projects\\My Code Jams\\TexttoMorse\\",
+  "WorkspaceRootPath": "C:\\Users\\jmflpat\\OneDrive - JM Family Enterprises\\HackbrightAcademy\\PeerReviews\\CodeJam4_TextUtility_Mahlon\\TextToMorse\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EBB152C2-31CB-42E4-92D9-59BCB3A85AE6}|TexttoMorse.csproj|c:\\users\\jmffhrf\\onedrive - jm family enterprises\\documents\\its academy projects\\my code jams\\texttomorse\\morsefunct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EBB152C2-31CB-42E4-92D9-59BCB3A85AE6}|TexttoMorse.csproj|c:\\users\\jmflpat\\onedrive - jm family enterprises\\hackbrightacademy\\peerreviews\\codejam4_textutility_mahlon\\texttomorse\\morsefunct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EBB152C2-31CB-42E4-92D9-59BCB3A85AE6}|TexttoMorse.csproj|solutionrelative:morsefunct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EBB152C2-31CB-42E4-92D9-59BCB3A85AE6}|TexttoMorse.csproj|c:\\users\\jmffhrf\\onedrive - jm family enterprises\\documents\\its academy projects\\my code jams\\texttomorse\\test1.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{EBB152C2-31CB-42E4-92D9-59BCB3A85AE6}|TexttoMorse.csproj|solutionrelative:test1.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EBB152C2-31CB-42E4-92D9-59BCB3A85AE6}|TexttoMorse.csproj|c:\\users\\jmffhrf\\onedrive - jm family enterprises\\documents\\its academy projects\\my code jams\\texttomorse\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EBB152C2-31CB-42E4-92D9-59BCB3A85AE6}|TexttoMorse.csproj|c:\\users\\jmflpat\\onedrive - jm family enterprises\\hackbrightacademy\\peerreviews\\codejam4_textutility_mahlon\\texttomorse\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EBB152C2-31CB-42E4-92D9-59BCB3A85AE6}|TexttoMorse.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,11 +24,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MorseFunct.cs",
-              "DocumentMoniker": "C:\\Users\\jmffhrf\\OneDrive - JM Family Enterprises\\Documents\\ITS Academy Projects\\My Code Jams\\TexttoMorse\\MorseFunct.cs",
+              "DocumentMoniker": "C:\\Users\\jmflpat\\OneDrive - JM Family Enterprises\\HackbrightAcademy\\PeerReviews\\CodeJam4_TextUtility_Mahlon\\TextToMorse\\MorseFunct.cs",
               "RelativeDocumentMoniker": "MorseFunct.cs",
-              "ToolTip": "C:\\Users\\jmffhrf\\OneDrive - JM Family Enterprises\\Documents\\ITS Academy Projects\\My Code Jams\\TexttoMorse\\MorseFunct.cs",
+              "ToolTip": "C:\\Users\\jmflpat\\OneDrive - JM Family Enterprises\\HackbrightAcademy\\PeerReviews\\CodeJam4_TextUtility_Mahlon\\TextToMorse\\MorseFunct.cs",
               "RelativeToolTip": "MorseFunct.cs",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAYwJQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwDcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-05T20:18:29.262Z",
               "IsPinned": true,
@@ -41,47 +37,16 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Test1.txt",
-              "DocumentMoniker": "C:\\Users\\jmffhrf\\OneDrive - JM Family Enterprises\\Documents\\ITS Academy Projects\\My Code Jams\\TexttoMorse\\Test1.txt",
-              "RelativeDocumentMoniker": "Test1.txt",
-              "ToolTip": "C:\\Users\\jmffhrf\\OneDrive - JM Family Enterprises\\Documents\\ITS Academy Projects\\My Code Jams\\TexttoMorse\\Test1.txt",
-              "RelativeToolTip": "Test1.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-09-05T18:27:22.125Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\jmffhrf\\OneDrive - JM Family Enterprises\\Documents\\ITS Academy Projects\\My Code Jams\\TexttoMorse\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\jmflpat\\OneDrive - JM Family Enterprises\\HackbrightAcademy\\PeerReviews\\CodeJam4_TextUtility_Mahlon\\TextToMorse\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\jmffhrf\\OneDrive - JM Family Enterprises\\Documents\\ITS Academy Projects\\My Code Jams\\TexttoMorse\\Program.cs",
+              "ToolTip": "C:\\Users\\jmflpat\\OneDrive - JM Family Enterprises\\HackbrightAcademy\\PeerReviews\\CodeJam4_TextUtility_Mahlon\\TextToMorse\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAkwGoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "OverriddenGroupName": "",
               "WhenOpened": "2024-09-05T15:25:41.392Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 179,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             }
           ]
         }

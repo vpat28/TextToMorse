@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jmffhrf\\OneDrive - JM Family Enterprises\\Documents\\ITS Academy Projects\\My Code Jams\\TexttoMorse\\TexttoMorse.csproj": {}
+    "C:\\Users\\jmflpat\\OneDrive - JM Family Enterprises\\HackbrightAcademy\\PeerReviews\\CodeJam4_TextUtility_Mahlon\\TextToMorse\\TexttoMorse.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jmffhrf\\OneDrive - JM Family Enterprises\\Documents\\ITS Academy Projects\\My Code Jams\\TexttoMorse\\TexttoMorse.csproj": {
+    "C:\\Users\\jmflpat\\OneDrive - JM Family Enterprises\\HackbrightAcademy\\PeerReviews\\CodeJam4_TextUtility_Mahlon\\TextToMorse\\TexttoMorse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jmffhrf\\OneDrive - JM Family Enterprises\\Documents\\ITS Academy Projects\\My Code Jams\\TexttoMorse\\TexttoMorse.csproj",
+        "projectUniqueName": "C:\\Users\\jmflpat\\OneDrive - JM Family Enterprises\\HackbrightAcademy\\PeerReviews\\CodeJam4_TextUtility_Mahlon\\TextToMorse\\TexttoMorse.csproj",
         "projectName": "TexttoMorse",
-        "projectPath": "C:\\Users\\jmffhrf\\OneDrive - JM Family Enterprises\\Documents\\ITS Academy Projects\\My Code Jams\\TexttoMorse\\TexttoMorse.csproj",
-        "packagesPath": "C:\\Users\\jmffhrf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jmffhrf\\OneDrive - JM Family Enterprises\\Documents\\ITS Academy Projects\\My Code Jams\\TexttoMorse\\obj\\",
+        "projectPath": "C:\\Users\\jmflpat\\OneDrive - JM Family Enterprises\\HackbrightAcademy\\PeerReviews\\CodeJam4_TextUtility_Mahlon\\TextToMorse\\TexttoMorse.csproj",
+        "packagesPath": "C:\\Users\\jmflpat\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jmflpat\\OneDrive - JM Family Enterprises\\HackbrightAcademy\\PeerReviews\\CodeJam4_TextUtility_Mahlon\\TextToMorse\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jmffhrf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jmflpat\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
